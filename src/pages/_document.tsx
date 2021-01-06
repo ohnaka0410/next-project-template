@@ -1,9 +1,17 @@
 import { default as NextDocument, Html, Head, Main, NextScript } from "next/document";
 
-type Props = {}
+/**
+ * Propsの型定義
+ */
+type Props = Readonly<{
+  /*
+   * Child Elements
+   */
+  children?: never;
+}>;
 
 class Document extends NextDocument<Props> {
-  render() {
+  render(): JSX.Element {
     return (
       <Html>
         <Head />
