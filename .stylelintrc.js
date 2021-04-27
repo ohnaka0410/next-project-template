@@ -1,7 +1,8 @@
 /**
  * stylelint Configuration
  */
-module.exports = {
+/** @type {import('stylelint').Configuration} */
+const config = {
   plugins: [
     // stylelintにprettierの設定を読み込むためのプラグイン
     "stylelint-prettier",
@@ -23,3 +24,5 @@ module.exports = {
     // custom
   },
 };
+
+module.exports = config;

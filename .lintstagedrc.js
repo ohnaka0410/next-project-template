@@ -1,6 +1,8 @@
 /**
  * Lint Staged Configuration
  */
-module.exports = {
+const config = {
   "*": ["format", "git add"],
 };
+
+module.exports = config;

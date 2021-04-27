@@ -1,7 +1,8 @@
 /**
  * Prettier Configuration
  */
-module.exports = {
+/** @type {import('prettier').Options} */
+const config = {
   // デフォルト設定
   // printWidth: 80
   // tabWidth: 2,
@@ -46,3 +47,5 @@ module.exports = {
   // endOfLine: "lf",
   embeddedLanguageFormatting: "auto",
 };
+
+module.exports = config;

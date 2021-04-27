@@ -1,7 +1,8 @@
 /**
  * ESLint Configuration
  */
-module.exports = {
+/** @type {import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config} */
+const config = {
   root: true,
   extends: [
     "eslint:recommended",
@@ -22,3 +23,5 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": ["error", { args: "none" }],
   },
 };
+
+module.exports = config;

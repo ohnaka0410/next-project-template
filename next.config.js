@@ -1,8 +1,11 @@
 /**
  * Next Configuration
  */
-module.exports = (phase, { defaultConfig }) => {
+/** @type {import('next/dist/next-server/server/config-shared').NextConfig} */
+const config = (phase, { defaultConfig }) => {
   return {
-    ...defaultConfig
-  }
-}
+    ...defaultConfig,
+  };
+};
+
+module.exports = config;

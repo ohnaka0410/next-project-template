@@ -1,7 +1,8 @@
 /**
  * PostCSS Configuration
  */
-module.exports = {
+/** @type {import('postcss').ProcessOptions} */
+const config = {
   plugins: {
     // 分割したファイルを結合する
     "postcss-import": {
@@ -46,3 +47,5 @@ module.exports = {
     "postcss-flexbugs-fixes": {},
   },
 };
+
+module.exports = config;

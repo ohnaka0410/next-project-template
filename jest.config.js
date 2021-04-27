@@ -4,10 +4,11 @@
 const { pathsToModuleNameMapper } = require("ts-jest/utils");
 const { readFileSync } = require("fs");
 const { parse } = require("json5");
-const {compilerOptions} = parse(readFileSync("./tsconfig.json"));
+const { compilerOptions } = parse(readFileSync("./tsconfig.json"));
 const moduleNameMapper = pathsToModuleNameMapper(compilerOptions.paths, { prefix: "<rootDir>/" });
 
-module.exports = {
+/** @type {import('@jest/types').Config.InitialOptions} */
+const config = {
   preset: "ts-jest",
   testEnvironment: "jsdom",
   roots: ["<rootDir>/src"],
@@ -18,3 +19,5 @@ module.exports = {
     },
   },
 };
+
+module.exports = config;
