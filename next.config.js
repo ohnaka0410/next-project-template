@@ -5,6 +5,10 @@
 const config = (phase, { defaultConfig }) => {
   return {
     ...defaultConfig,
+    reactStrictMode: true,
+    eslint: {
+      dirs: ["src/components/", "src/layouts", "src/libs", "src/pages", "src/services"],
+    },
   };
 };
 

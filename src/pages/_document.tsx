@@ -3,12 +3,7 @@ import { default as NextDocument, Html, Head, Main, NextScript } from "next/docu
 /**
  * Propsの型定義
  */
-type Props = Readonly<{
-  /*
-   * Child Elements
-   */
-  children?: never;
-}>;
+type Props = {};
 
 class Document extends NextDocument<Props> {
   render(): JSX.Element {

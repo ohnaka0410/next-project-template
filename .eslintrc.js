@@ -4,15 +4,7 @@
 /** @type {import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config} */
 const config = {
   root: true,
-  extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    // prettierと重複するルールを無効化
-    "prettier/@typescript-eslint",
-  ],
-  plugins: ["@typescript-eslint"],
-  parser: "@typescript-eslint/parser",
+  extends: ["next", "next/core-web-vitals"],
   parserOptions: {
     sourceType: "module",
     project: "./tsconfig.eslint.json",
@@ -20,7 +12,6 @@ const config = {
   env: { browser: true, node: true, es6: true },
   rules: {
     // custom
-    "@typescript-eslint/no-unused-vars": ["error", { args: "none" }],
   },
 };
 

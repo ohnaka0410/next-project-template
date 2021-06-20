@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
 import "~/styles/globals.css";
 
-const App: React.FC<AppProps> = ({ Component, pageProps }: AppProps): JSX.Element => {
+const App: React.VFC<AppProps> = ({ Component, pageProps }: AppProps): JSX.Element => {
   return <Component {...pageProps} />;
 };
 
